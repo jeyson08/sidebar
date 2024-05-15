@@ -7,3 +7,17 @@
 
 // Aide
 // Priorités en CSS : id > classe > baliseHtml
+
+const sidebar = document.getElementById("side-bar");
+const content = document.querySelector(".content");
+const burger = document.getElementById("btn");
+const span = document.querySelectorAll(".toggle-btn span");
+console.log(span);
+
+burger.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+content.addEventListener("click", () => {
+  sidebar.classList.remove("active");
+});
